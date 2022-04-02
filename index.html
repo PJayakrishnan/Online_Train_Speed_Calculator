@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Train Speed Calculator</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="./logo.png" alt="Logo">
+            <h3>Trains <br> are speeding</h3>
+        </div>
+
+        <input type="checkbox" name="" id="nav-toggle">
+        <label for="nav-toggle"><span></span></label>
+
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="container">
+
+            <!-- Cards -->
+
+        <div class="card card-grid-1">
+            <h1>1.</h1>
+            <h4>You can find speed of a train from outside.</h4>
+        </div>
+
+        <div class="card card-grid-2">
+            <h2>2.</h2>
+            <h5>If you have,</h5>
+            <ul>
+                <li>Type and Number of coaches.</li>
+                <li>Type and Number of locomotives.</li>
+                <li>Time taken by the train to cross a referance point.</li>
+            </ul>
+        </div>
+
+        <!-- Calculator form-->
+
+        <div class="calculator">
+
+            <!-- inputs -->
+            <form>
+                <div>
+                    <label for="coachType">Type of Coaches:</label>
+                    <select name="coachType" id="coachType">
+                        <option value="22.28">ICF</option>
+                        <option value="24.70">LBH</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="coachNumber">Number of coaches:</label>
+                    <input name="coachNumber" id="coachNumber" class="custom-input" type="number">
+                </div>
+               
+                <div>
+                    <label for="locType">Type of Locomotive:</label>
+                    <select name="locType" id="locoType">
+                        <option value="19.975">WAM-4</option>
+                        <option value="18.794">WAP-1</option>
+                        <option value="18.794">WAP-3</option>
+                        <option value="18.794">WAP-4</option>
+                        <option value="18.162">WAP-5</option>
+                        <option value="18.79">WAP-6</option>
+                        <option value="20.562">WAP-7</option>
+                        <option value="20.394">WCM-6</option>
+                        <option value="17.12">WDM-2</option>
+                        <option value="14.810">WDP-1</option>
+                        <option value="18.62">WDP-3A</option>
+                        <option value="21.26">WDP-4</option>
+                    </select>
+                </div>
+               
+                <div>
+                    <label for="locoNumber">Number of Locomotives:</label>
+                     <input name="locoNumber" id="locoNumber" class="custom-input" type="number">
+                </div>
+                
+                <div>
+                    <label for="timeTaken">Time taken in seconds:</label>
+                     <input name="timeTaken" id="timeTaken" class="custom-input" type="number">
+                </div>
+            </form>
+            <div class="output">
+                 <!-- Button to Calculate -->
+
+                 <button name="calculate" onclick="speedCalculation()">Calculate</button>
+
+                 <!-- outputs -->
+
+                 <label id="display"></label>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- footer -->
+
+    <footer>
+        <p>&copy; Train speed calculator</p>
+    </footer>
+</body>
+<script src="./index.js"></script>
+</html>
